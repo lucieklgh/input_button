@@ -1,0 +1,38 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Input in Array</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="text" name="text" id="textInput"/>
+<button onclick="data ();">Enter</button>
+<p id="text"></p>
+
+<script>
+	
+	var myArr = [""];
+
+	function data() {
+		 
+		var textInput = document.getElementById('textInput').value;
+
+		myArr.push(textInput);
+
+		var pval = ""
+
+		for(i = 0; i < myArr.length; i++) {
+			pval = pval + myArr[i] + "<br/>" + "<br/>";
+		}
+
+		document.getElementById('text').innerHTML = pval;
+
+	}
+</script>
+
+</body>
+</html>
